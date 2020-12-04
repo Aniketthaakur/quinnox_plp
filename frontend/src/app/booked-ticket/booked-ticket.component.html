@@ -1,0 +1,192 @@
+<body>
+  <div class="alert alert-danger" *ngIf="failure">{{ failure }}</div>
+  <div class="alert alert-success" *ngIf="success">{{ success }}</div>
+  <div class="container">
+    <div class="alert alert-primary" *ngIf="message">{{ message }}</div>
+    <div class="alert alert-warnig" *ngIf="description">{{ description }}</div>
+    <br /><br />
+    <form
+      class="form-row"
+      role="form"
+      #bookedFlightForm="ngForm"
+      (ngSubmit)="bookedFlight(bookedFlightForm)"
+    >
+      <h3>Book Flight Ticket</h3>
+
+      <div class="row">
+        <div class="form-group" id="d1">
+          <label for="flightId" class="col-sm-9  control-label">Flight Id</label>
+          <div class="col-sm-11">
+            <input
+              type="text"
+              id="flightId"
+              class="form-control"
+              name="flightId"
+              #flightId="ngModel"
+              ngModel
+              [(ngModel)]="flightIds"
+              readonly
+              autofocus
+            />
+          </div>
+          <label for="sourceCity" class="col-sm-9 control-label"
+            >Source City Name</label
+          >
+          <div class="col-sm-11">
+            <input
+              type="text"
+              id="sourceCity"
+              placeholder="Source city Name"
+              class="form-control"
+              name="sourceCity"
+              #sourceCity="ngModel"
+              ngModel
+              [(ngModel)]="sourceCitys"
+              readonly
+              autofocus
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="destinationCity" class="col-sm-9 control-label"
+            >Destination City</label
+          >
+          <div class="col-sm-11">
+            <input
+              type="text"
+              id="destinationCity"
+              placeholder="Destination City"
+              class="form-control"
+              name="destinationCity"
+              #destinationCity="ngModel"
+              ngModel
+              [(ngModel)]="destinationCitys"
+              readonly
+              autofocus
+            />
+          </div>
+
+          <label for="takeOffTime" class="col-sm-9  control-label"
+            >Take Off Time*
+          </label>
+          <div class="col-sm-11">
+            <input
+              type="text"
+              id="takeOffTime"
+              placeholder="Take off time"
+              class="form-control"
+              name="takeOffTime"
+              #takeOffTime="ngModel"
+              ngModel
+              readonly
+              [(ngModel)]="takeOffTimes"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="arrivalTime" class="col-sm-9 control-label"
+            >Arrival Time*</label
+          >
+          <div class="col-sm-11">
+            <input
+              type="text"
+              id="arrivalTime"
+              name="arrivalTime"
+              placeholder="Arriavl Time"
+              class="form-control"
+              #arrivalTime="ngModel"
+              ngModel
+              readonly
+              [(ngModel)]="arrivalTimes"
+            />
+          </div>
+        </div>
+          <div class="form-group">
+          <label for="dateOfBooking" class="col-sm-9 control-label"
+            >Date Of Departure*</label
+          >
+          <div class="col-sm-11">
+            <input
+              type="text"
+              id="dateOfBooking"
+              placeholder="Date of Booking"
+              class="form-control"
+              name="dateOfBooking"
+              #dateOfBooking="ngModel"
+              ngModel
+              [(ngModel)]="dateOfBookings"
+              readonly
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="customerId" class="col-sm-9 control-label"
+            >Customer Id*</label
+          >
+          <div class="col-sm-11">
+            <input
+              type="text"
+              id="customerId"
+              placeholder="Customer Id"
+              class="form-control"
+              name="customerId"
+              #customerId="ngModel"
+              ngModel
+              [(ngModel)]="customerIds"
+              readonly
+            />
+          </div>
+
+          <!-- /.form-group -->
+        </div>
+
+        <div class="form-group">
+            <label for="seat" class="col-sm-9 control-label">Total Seat </label>
+            <div class="col-sm-11">
+                <input type="text" id="seat" placeholder="Enter Seats " class="form-control 
+                ng-untouched ng-pristine ng-valid" 
+                name="seat" #seat='ngModel' ngModel
+                required
+                minlength="1"
+                pattern="[1-9]{1}"
+                />
+  
+                <div *ngIf='seat.touched && seat.invalid'>
+                  <div class="text-danger" *ngIf='seat.errors.required'>
+                      *This field is mandatory
+                  </div>
+                  <div class="text-danger" *ngIf='seat.errors.minlength'>
+                      Minimum 1 seat are required
+                  </div>
+                  <div class="text-danger" *ngIf='seat.errors.pattern'>
+                    Minimum 1 seat and  Maximum 9 seats can book one passenger
+                  </div>
+              </div> 
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <span class="help-block">*Required fields</span>
+      </div>
+      <button type="submit" class="btn btn-info btn-block ml-auto" 
+      [disabled]='bookedFlightForm.invalid'>
+        Book Ticket
+      </button>
+    </form>
+    <!-- /form -->
+  </div>
+  <!-- ./container -->
+  <div class="footer">
+    <footer>
+      <small
+        >&copy; Copyright {{ currentYear }}, Quinnox Airline Corporation</small
+      >
+    </footer>
+  </div>
+</body>

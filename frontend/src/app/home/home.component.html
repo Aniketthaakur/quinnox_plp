@@ -1,0 +1,111 @@
+<div class="card1">
+  <div class="alert alert-primary" *ngIf='message'>
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    {{message}}
+  
+  </div>
+  <div class="alert alert-warnig" *ngIf='description'>
+
+
+    <h1 style="font-family: sans-serif; color: rgb(243, 3, 3); margin-left: 450px;"> <div class="spinner-grow" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>&nbsp; {{description}}</h1>
+
+  
+  </div>
+  <section>
+<h1 style="margin-left:120px; color: black;font-family: cursive;">Quinnox Airline</h1>
+<div class="card  mr-5 ml-5 " style="width: 25rem;float: left; ">
+  <img src="https://wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-4.jpg" class="card-img-top" alt="..." 
+  style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);height: 250px;">
+  </div>
+    <h3 style="margin-left:120px; color: rgba(234, 238, 6, 0.932);font-family: cursive;">Quinnox Airline</h3>
+    <h5>Quinnox Airline is India’s largest passenger airline with a market share of 59.4% as of August, 2020. We primarily operate in India’s domestic air travel market as a low-cost carrier with focus on our three pillars – offering low fares, being on-time and delivering a courteous and hassle-free experience
+      Since our inception in August 2006, we have grown from a carrier
+      type of operation, high operational service make us one of the most reliable airlines in the world.
+    </h5>
+  </section>
+  <section style="margin-top: 130px;">
+  <h1 style="margin-left:120px; color: black;font-family: cursive;">Flight Booking</h1>
+  <div class="card ml-5 mr-5 caddddd" style="width: 25rem; float: left; ">
+    <img src="https://wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-37.jpg" class="card-img-top" alt="..."  style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);">
+    <h3 style="color: rebeccapurple;font-family: monospace;">Quinnox Airways</h3>
+    </div>
+
+        <form #searchFlightForm='ngForm' (ngSubmit)='searchFlight(searchFlightForm)' >
+          <div class="row">
+          <div class="form-group col-md-6">
+          <label for="sourceCity"><h4 class="ml-5" style="font-family: cursive;color: rgb(26, 25, 24);">Flying From</h4></label>
+          <br>
+            <select name="sourceCity" id="sourceCity" style="margin-left: 30px;width: 200px; font-family: cursive; color: rgba(20, 19, 19, 0.836);"
+            #sourceCity='ngModel' ngModel
+            required
+            >
+              <option value="Bangalore">Bangalore</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Ranchi">Ranchi</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+            </select>
+            <div *ngIf='sourceCity.touched && sourceCity.invalid'>
+              <div class="text-danger" *ngIf='sourceCity.errors.required'>
+                  *This field is mandatory
+              </div>
+              </div>
+            <br>
+          </div>
+          <div class="form-group col-md-5">
+            <label for="destinationCity"><h4 class="ml-5" style="font-family: cursive;color: rgb(46, 45, 41);">Moving To</h4></label>
+            <br>
+              <select name="destinationCity" id="destinationCity" style="margin-left: 30px;width: 200px; font-family: cursive; color: rgba(17, 17, 17, 0.836);"
+              #destinationCity='ngModel' ngModel
+              required
+              >
+                <option value="Bangalore">Bangalore</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Ranchi">Ranchi</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+              </select>
+              <div *ngIf='destinationCity.touched && destinationCity.invalid'>
+                <div class="text-danger" *ngIf='destinationCity.errors.required'>
+                    *This field is mandatory
+                </div>
+                </div>
+              <br>
+              </div>
+            </div>
+            <div class="row">
+          <!-- <div class="form-group col-md-6">
+
+              <label for="flightDay"><h4 class="ml-5" style="font-family: cursive;color: rgb(26, 25, 24);">Departure Day</h4></label>
+              <br>
+              <select name="flightDay" id="flightDay" class="form-control"
+              #flightDay='ngModel' ngModel style="margin-left: 30px; width: 200px;height: 35px; font-family: cursive; color: rgba(27, 26, 24, 0.836);"
+              >
+              <option value="sunday" >Sunday</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thrusday">Thrusday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
+              
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            </div> -->
+              <button class="btn btn-warning" [disabled]='searchFlightForm.invalid' >Submit</button>
+            </div>
+        </form>
+      
+    </section>
+</div>
+<div class="footer">
+  <footer> <small>&copy; Copyright {{currentYear}}, Quinnox Airline Corporation</small> </footer> 
+</div>

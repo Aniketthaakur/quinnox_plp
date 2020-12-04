@@ -1,0 +1,109 @@
+
+a{
+  font-family: cursive;
+  text-decoration: none;
+}
+.btn-circle{
+  border-radius: 50%;
+  border: 0px solid honeydew;
+  color: rgb(37, 35, 35);
+}
+.spinner{
+  color: red;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(238, 231, 231);
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 2.4s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+ 
+#sp1{
+  font-family: cursive;
+  font-size: 50px;
+  color: rgb(238, 178, 13);
+}
+#sp2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+  font-size: 45px;
+  font-weight: 60;
+}
+
+/* #man{
+  font-size: 50px;
+  font-family: monospace;
+  color: rgb(241, 241, 129);
+}
+#a{
+  font-size: 50px;
+  font-family: monospace;
+  color: orange;
+}
+#nt{
+  font-size: 50px;
+  font-family: monospace;
+  color: orange;
+}
+#ic{
+font-size: 40px;
+}  */
+
+
+.btn{
+  border-radius: 0;
+  margin-bottom: 0;
+}
+#nav2{
+  
+}
+
+label{
+  color: gold;
+}
+
+.badge {
+
+  top: -23px;
+  right: -10px;
+  left: -15px;
+
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+#person{
+  background-color: whitesmoke;
+}
+.btn-basic{
+  font-size: 18px;
+  font-family: sans-serif;
+  border: none;
+}
+.btn-basic:hover{
+  color: rgb(236, 43, 9);
+  
+}
+.btn-default:hover{
+  color: brown;
+}

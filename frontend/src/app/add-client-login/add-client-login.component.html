@@ -1,0 +1,31 @@
+<div class="container offset-md-4">
+
+  <form  #AddCustomerForm='ngForm' (ngSubmit)='addCustomer(AddCustomerForm)'  class="form-row" >
+    <h3>Please Note Email and Password</h3>
+    <div class="row">
+    <div class="form-group col-md-5">
+    <label for="email">Email</label>
+    <input type="text" name="email" class="form-control" id="name" #email='ngModel' [(ngModel)]='emails' readonly>
+   </div>
+
+   <div class="form-group col-md-5">
+    <label for="password">Password</label>
+    <input type="text" name="password" class="form-control" id="password" #password='ngModel' [(ngModel)]='passwords' readonly>
+   </div>
+  </div>
+  <div class="row">
+   <div class="form-group col-md-5">
+    <label for="userType" hidden>Role</label>
+    <input type="text" name="userType" class="form-control" id="userType" #userType='ngModel' ngModel [(ngModel)]='userTypes' hidden>
+   </div>
+
+   <div class="form-group col-md-5">
+    <label for="userId" hidden>UserId</label>
+    <input type="text" name="userId" class="form-control" id="userId" #userId='ngModel' ngModel [(ngModel)]='userIds' hidden>
+   </div>
+  </div>
+   <button type="submit" class="btn btn-info" style="margin-left: 200px;">Submit</button>
+  </form>
+
+
+</div>

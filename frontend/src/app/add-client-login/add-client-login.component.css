@@ -1,0 +1,45 @@
+form {
+  box-sizing: border-box;
+  width: 550px;
+  margin: 10px 50px 100px ;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.2);
+  padding-bottom: 40px;
+  border-radius: 3px;
+  text-align: center;
+  align-content: center;
+  margin-top: 90px;
+}
+input::-webkit-input-placeholder, button {
+  font-family: 'roboto', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+input{
+  margin-left: 10px;
+}
+button{
+margin-left: 42%;
+}
+h3{
+  margin-top: 20px;
+margin-left: 10%;
+font-family: cursive;
+color: lightcoral;
+margin-bottom: 30px;
+}
+label{
+  font-family: sans-serif;
+  color: rgb(240, 115, 13);
+  font-size: 20px;
+}
+input{
+  font-family: cursive;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+input[type=text] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
+}

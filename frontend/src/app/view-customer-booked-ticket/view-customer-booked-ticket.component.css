@@ -1,0 +1,11 @@
+.background{
+ height: 500px;
+}
+.jumbotron{
+ background-image: url('https://wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-11.jpg');
+ background-size: cover;
+ 
+}
+table{
+  background-color: seashell;
+}

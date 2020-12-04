@@ -1,0 +1,79 @@
+body {
+     background: url('https://wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-13.jpg') fixed;
+    background-size: cover;
+}
+
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: #f2f2f2;
+}
+
+*[role="form"] h2 { 
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    position: fixed;
+    padding: 8px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(75, 80, 72);
+    color: white;
+    text-align: center;
+  }
+
+  .ng-valid[required], .ng-valid.required  {
+    border-bottom: 4px solid #42A948; /* green */
+  }
+  input.ng-touched.ng-invalid{
+    border-bottom: 2px solid red;
+  }
+
+  
+form {
+  box-sizing: border-box;
+  width: 500px;
+  margin-top: 20px;
+  margin: 10px 50px 50px ;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  margin-left: 120px;
+}
+input::-webkit-input-placeholder, button {
+  font-family: 'roboto', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=text],input[type=number],input[type=password],input[type=date] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
+}
+select{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
+}
+
+button{
+  height: 43px;
+margin-top: 20px;
+margin-left: 200px;
+}

@@ -1,0 +1,99 @@
+/* Made with love by Mutiullah Samim*/
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+.container-fluid{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(241, 247, 248, 0.5) !important;
+}
+
+.card-header h3{
+color: rgb(22, 21, 21);
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: rgb(248, 204, 82);
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: white;
+background-color: rgb(116, 109, 90);
+width: 100px;
+}
+
+.login_btn:hover{
+color: rgb(208, 241, 58);
+background-color: black
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+.mt-4{
+    margin-top: 10% !important;
+}
+.bg-image {
+    background-image: url('https://wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 680px;
+  }
+  .h-100 {
+    height: -webkit-fill-available !important;
+}
+input.ng-touched.ng-invalid{
+  border: 2px solid red;
+}
+input.ng-touched.ng-valid{
+  border: 1px solid green;
+}
+
+.card-body{
+  box-shadow: 0px 0px 20px 0px rgb(190, 190, 178);
+}
+.card-header{
+  box-shadow: 0px 0px 20px 0px rgb(104, 99, 99);
+}
+.footer {
+  position: fixed;
+  padding: 15px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(75, 80, 72);
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,47 @@
+<div class="jumbotron">
+  <div class="alert alert-danger" *ngIf='failure'>{{failure}}</div>
+  <div class="alert alert-success" *ngIf='success'>{{success}}</div>
+  <div class="background"> 
+  <div class="container mt-3">
+      <table class="table table-bordered table-hover">
+          <thead class="thead-dark">
+              <tr>
+                  <th>Booked Ticket Id</th>
+                  <th>Flight Id</th>
+                  <th>Customer Id</th>
+                  <th>Source City</th>
+                  <th>Destination City</th>
+                  <th>Take Off Time</th>
+                  <th>Flight Arrival Time</th>
+                  <th>Date of Departure</th>
+                  <th>Cancel Ticket</th>                  
+                  <th>Reschedule Ticket</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor= 'let flight of Flights'>
+                <td>{{flight.ticketId}}</td>
+                  <td>{{flight.flightId}}</td>
+                  <td>{{flight.customerId}}</td>
+                  <td>{{flight.sourceCity}}</td>
+                  <td>{{flight.destinationCity}}</td>
+                  <td>{{flight.takeOffTime}}</td>
+                  <td>{{flight.arrivalTime}}</td>
+                  <td>{{flight.dateOfBooking}}</td>
+                  <td><button class="btn btn-outline-danger"
+                    (click)='cancelflight(flight)'>
+                    <span class="material-icons">
+                        delete_sweep
+                        </span>
+                    </button></td>
+                  
+                      <td><button class="btn btn-outline-info"
+                          (click)='rescheduleflight(flight)'> <span class="material-icons">
+                            update
+                            </span></button></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  </div>
+  </div>

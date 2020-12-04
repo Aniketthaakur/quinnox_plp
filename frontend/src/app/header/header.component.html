@@ -1,0 +1,155 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 
+  <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav" id="abc">
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/"><span class="material-icons spinner">
+        airplanemode_active
+        </span><span id="sp2">Airline Reservation</span><span id="sp1"> System</span> </a>
+    </li>
+  </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active" *ngIf='!isAdmin() && !isClient()'>
+        <a class="nav-link" routerLink="/notification" type="button" class="btn btn-circle" style="margin-right: 30px;">
+          <span class="material-icons" style="color: beige;font-size: 35px;">
+            notification_important
+            </span>
+            <span class="badge">?</span>
+        </a>
+      </li>
+      <li class="nav-item active" *ngIf='isClient()'>
+        <a class="nav-link" routerLink="/customernotification" type="button" class="btn btn-circle" style="margin-right: 30px;">
+          <span class="material-icons" style="color: beige;font-size: 35px;">
+            notification_important
+            </span>
+            <span class="badge">?</span>
+        </a>
+      </li>
+      <li class="nav-item active" *ngIf='!isLoggedIn()'>
+        <a class="nav-link" routerLink="/login" type="button" class="btn btn-default btn-circle" id="person" style="border-radius: 50%;">
+          <span class="material-icons" id="ic" style="font-size: 34px;">
+            person
+            </span>
+        </a>
+      </li>
+
+
+      <li class="nav-item active" *ngIf='isLoggedIn()'>
+        <a class="nav-link" (click)='logout()' type="button" class="btn btn-warning btn-circle" style="border-radius: 50%;">
+        <span class="material-icons">
+            person 
+            </span>
+          Logout</a>
+      </li>
+    
+
+    </ul>
+    
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav2">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav" id="abc">
+  
+      
+        <hr><hr>&nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/" type="btn" class="btn btn-basic"> <span class="material-icons">
+          home_work
+          </span>Home</a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/about" type="btn" class="btn btn-basic"><span class="material-icons">
+          menu_book
+          </span> About Us <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" *ngIf='isClient()'>
+        <a class="nav-link" type="btn" class="btn btn-basic" routerLink="/schedule">
+          <span class="material-icons">
+            flight_takeoff
+            </span>
+          Flight Schedule</a>
+      </li>
+      <li class="nav-item active" *ngIf='!isClient()'>
+        <a class="nav-link" type="btn" class="btn btn-basic" routerLink="/sechduleflight"><span class="material-icons">
+          flight_takeoff
+          </span> Flight Schedule</a>
+      </li> 
+      <li class="nav-item active" *ngIf='!isAdmin()'>
+        <a class="nav-link" routerLink="/contact" type="btn" class="btn btn-basic">
+          <span class="material-icons">
+            local_phone
+            </span>
+          Contact Us</a>
+      </li>
+      
+      <li class="nav-item active" *ngIf='!isAdmin() && !isClient()'>
+        <a class="nav-link" routerLink="/register" type="btn" class="btn btn-basic">
+          <span class="material-icons">
+            person_add
+            </span>
+          Register </a>
+      </li>
+      <li class="nav-item active" *ngIf='!isAdmin() && isClient()' >
+        <a class="nav-link" routerLink="/getCustomer" type="btn" class="btn btn-basic">
+          <span class="material-icons">
+            account_circle
+            </span>
+          View Profile </a>
+      </li>
+      <li class="nav-item active" *ngIf='isAdmin()' >
+        <a class="nav-link" routerLink="/addFlight" type="btn" class="btn btn-basic">
+          <span class="material-icons">
+            control_point
+            </span>
+          <span class="material-icons">
+          flight
+          </span>Add-Flight </a>
+      </li>
+      <li class="nav-item active" *ngIf='isAdmin()' >
+        <a class="nav-link" routerLink="/getFlight" type="btn" class="btn btn-basic">
+          <span class="material-icons">
+            info
+            </span>
+          View-All-Flight </a>
+      </li>
+      <li class="nav-item active" *ngIf='isAdmin()' >
+        <a class="nav-link" routerLink="/viewallcustomerdetails" type="btn" class="btn btn-basic">
+          <span class="material-icons">
+            info
+            </span>
+          View All Customers </a>
+      </li>
+      
+      <li class="nav-item active" *ngIf='isAdmin()' >
+        <a class="nav-link" routerLink="/viewbookedticket" type="btn" class="btn btn-basic">
+          <span class="material-icons">
+            list
+            </span>
+          View Booked Ticket </a>
+      </li>
+      
+      <!-- <li class="nav-item active" *ngIf='!isClient()' >
+        <a class="nav-link" routerLink="/viewticket" type="btn" class="btn btn-basic">
+          <span class="material-icons">
+            list
+            </span>
+          View Booked Ticket </a>
+      </li> -->
+      <li class="nav-item active" *ngIf='isClient()' >
+        <a class="nav-link" routerLink="/viewcustomerbookedticket" type="btn" class="btn btn-basic">
+          <span class="material-icons">
+            list
+            </span>
+          View Booked Ticket </a>
+      </li>
+
+    </ul>
+
+
+  </div>
+</nav>
+

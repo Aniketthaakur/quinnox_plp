@@ -1,0 +1,76 @@
+.card1{
+  background-image: url('https://wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-2.jpg');
+height: 750px;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.cardd{
+  width: 550px;
+  font-family: cursive;
+  background-color: rgb(121, 113, 113);
+  opacity: 0.9;
+  color: aliceblue;
+}
+
+.caddd{
+  background-color: rgba(168, 234, 243, 0.479);
+  opacity: 0.9;
+}
+.caddddd{
+  height: 29px;
+}
+.footer {
+  position: fixed;
+  padding: 15px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(75, 80, 72);
+  color: white;
+  text-align: center;
+}
+h5{
+  font-family: cursive;
+  opacity: 1;
+
+  font-weight: 200;
+  color: rgb(70, 68, 68)
+}
+button{
+  margin-top: 26px;
+  height: 37px;
+  width: 30%;
+  margin-left: 200px;
+  margin-bottom: 10px ;
+}
+
+form {
+  box-sizing: border-box;
+  width: 550px;
+  margin: 10px 5px 100px ;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.2);
+  padding-bottom: 40px;
+  border-radius: 3px;
+  text-align: initial;
+  align-content: center;
+  padding: 20px;
+  margin-left: 600px;
+
+}
+input::-webkit-input-placeholder, button {
+  font-family: 'roboto', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
+}
+label{
+  text-align: center;
+
+}
+

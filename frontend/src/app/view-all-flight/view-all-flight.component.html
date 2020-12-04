@@ -1,0 +1,51 @@
+<div class="jumbotron">
+  <div class="alert alert-danger" *ngIf='failure'>{{failure}}</div>
+  <div class="alert alert-success" *ngIf='success'>{{success}}</div>
+  <div class="background">
+  <div class="container mt-3">
+      <table class="table table-bordered table-striped table-hover">
+          <thead class="thead-dark">
+              <tr>
+                  <th>Flight Id</th>
+                  <th>Source City</th>
+                  <th>Destination City</th>
+                  <th>Take Off Time</th>
+                  <th>Flight Arrival Time</th>
+                  <th>Flight Price</th>
+                  <th>Day Of Flying</th>
+                  <th>Date Of Departure</th>
+                  <th>Total Seat Available</th>
+                  <th>Delete</th>                  
+                  <th>Modify</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor= 'let flight of Flights'>
+                  <td>{{flight.flightId}}</td>
+                  <td>{{flight.sourceCity}}</td>
+                  <td>{{flight.destinationCity}}</td>
+                  <td>{{flight.takeOffTime}}</td>
+                  <td>{{flight.arrivalTime}}</td>
+                  <td>{{flight.priceOfFlight}}</td>
+                  <td>{{flight.flightDay}}</td>
+                  <td>{{flight.departuredate}}</td>
+                  <td>{{flight.seat}}</td>
+                  <td><button class="btn btn-outline-danger"
+                    (click)='deleteflight(flight)'><span class="material-icons">
+                        delete_forever
+                        </span>
+                        
+                        </button></td>
+                  
+                      <td><button class="btn btn-outline-success"
+                          (click)='modifyflight(flight)'><span class="material-icons">
+                            update
+                            </span>
+                            
+                            </button></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  </div>
+  </div>

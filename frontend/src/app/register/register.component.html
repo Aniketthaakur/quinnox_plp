@@ -1,0 +1,206 @@
+<div class="cardbody">
+<div class="container register">
+  <div class="row">
+      <div class="col-md-3 register-left">
+          <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+          <h3>Welcome</h3>
+          <p style="font-family: sans-serif;">You are 30 seconds away to become a member of Airline corporaton!</p>
+
+      </div>
+      <div class="col-md-9 register-right">
+ 
+          <div class="tab-content" id="myTabContent">
+            <form #AddCustomerForm='ngForm' (ngSubmit)='addCustomer(AddCustomerForm)'> 
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <h3 class="register-heading">Customer Registration Form</h3>
+                  <div class="row register-form">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="customerName">Customer Name</label>
+                              <input type="text" class="form-control 
+                               ng-untouched ng-pristine ng-valid" name="customerName" id="customerName " placeholder="First Name *"  #customerName='ngModel' ngModel
+                               minlength="4"
+                               required
+                               pattern="[A-Za-z\s]{3,}$"
+                               />
+
+                               <div *ngIf='customerName.touched && customerName.invalid'>
+                                <div class="text-danger" *ngIf='customerName.errors.required'>
+                                    *This field is mandatory
+                                </div>
+                                <div class="text-danger" *ngIf='customerName.errors.minlength'>
+                                    Minimum 4 character are required
+                                </div>
+                                <div class="alert-danger ml" *ngIf='customerName.errors.pattern'>
+                                    Invalid name Character only
+                                </div>
+                            </div>
+                            
+
+                          </div>
+                          <div class="form-group">
+                            <label for="customerEmail">Customer Email</label>
+                              <input type="text" class="form-control 
+                              ng-untouched ng-pristine ng-valid" placeholder="email*" name="customerEmail"
+                              id="customerEmail" #customerEmail='ngModel' 
+                              ngModel
+                              required
+                               pattern="[a-zA-Z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,}$"/>
+
+                               <div *ngIf='customerEmail.touched && customerEmail.invalid'>
+                                <div class="text-danger" *ngIf='customerEmail.errors.required'>
+                                    *This field is mandatory
+                                </div>
+                                <div class="text-danger" *ngIf='customerEmail.errors.minlength'>
+                                    Minimum 4 character are required
+                                </div>
+                                <div class="alert-danger ml" *ngIf='customerEmail.errors.pattern'>
+                                    invalid email
+                                </div>
+                            </div>
+                          </div>
+
+
+                          <div class="form-group">
+                            <label for="customerPassword">Customer Password</label>
+                              <input type="password" class="form-control" placeholder="Password *" name="customerPassword" id="customerPassword"
+                              #customerPassword='ngModel' ngModel 
+                              required
+                             pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                              />
+                              
+                              <div *ngIf='customerPassword.invalid && customerPassword.touched'>
+                                <div class="text-danger" *ngIf='customerPassword.errors.required'>
+                                    *this field is mandatory
+                                </div>
+                                <div class="alert-danger" *ngIf='customerPassword.errors.pattern'>
+                                    Minimum 8 characters, should include one uppercase, one lowercase and one number
+                                </div>
+                            </div>
+
+
+                          </div>
+                          <div class="form-group">
+                            <label for="customerAddress">Customer Address</label>
+                              <input type="text" class="form-control"  placeholder="Enter Address *" name="customerAddress"
+                              id="customerAddress" #customerAddress='ngModel' ngModel 
+                              required
+                              pattern="[A-Za-z0-9\s-]{6,}"
+                              />
+
+                              <div *ngIf='customerAddress.touched && customerAddress.invalid'>
+                                <div class="text-danger" *ngIf='customerAddress.errors.required'>
+                                    *This field is mandatory
+                                </div>
+                                <div class="text-danger" *ngIf='customerAddress.errors.minlength'>
+                                    Minimum 6 character are required
+                                </div>
+                                <div class="alert-danger ml" *ngIf='customerAddress.errors.pattern'>
+                                    Address Contain character or number only
+                                </div>
+                            </div>
+
+                          </div>
+                          <div class="form-group">
+                              <div class="maxl">
+                                  <label class="radio inline" for="gender"> 
+                                      <input type="radio" name="gender" value="male" id="gender" #gender='ngModel' ngModel checked>
+                                      <span> Male </span> 
+                                  </label >
+                                  &nbsp;
+                                  <label class="radio inline" for="gender"> 
+                                      <input type="radio" name="gender" value="female" id="gender" #gender='ngModel' ngModel>
+                                      <span>Female </span> 
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="customerPhoneNumber" >
+                               PhoneNumber</label>
+                              <input type="number" class="form-control" 
+                              name="customerPhoneNumber" id="customerPhoneNumber"
+                              placeholder="phone number *" #customerPhoneNumber='ngModel' ngModel 
+                              required
+                              pattern="[0-9]{10}"
+                              />
+
+                              <div *ngIf='customerPhoneNumber.touched && customerPhoneNumber.invalid'>
+                                <div class="text-danger" *ngIf='customerPhoneNumber.errors.required'>
+                                    *This field is mandatory
+                                </div>
+                                <div class="text-danger" *ngIf='customerPhoneNumber.errors.minlength'>
+                                    Minimum 6 character are required
+                                </div>
+                                <div class="alert-danger ml" *ngIf='customerPhoneNumber.errors.pattern'>
+                                    Phone number contains only 10 digit number 
+                                </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="customerNationality">Customer Nationality</label>
+                              <input type="text"  name="customerNationality" class="form-control"  id="customerNationality" #customerNationality='ngModel' ngModel 
+                              required
+                              pattern="[A-Za-z]{3,}"
+                              />
+
+                              <div *ngIf='customerNationality.touched && customerNationality.invalid'>
+                                <div class="text-danger" *ngIf='customerNationality.errors.required'>
+                                    *This field is mandatory
+                                </div>
+                                <div class="text-danger" *ngIf='customerNationality.errors.minlength'>
+                                    Minimum 3 character are required
+                                </div>
+                                <div class="alert-danger ml" *ngIf='customerNationality.errors.pattern'>
+                                    This field contains character only 
+                                </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="customerCity">Customer Country</label>
+                              <select class="form-control" name="customerCity" id="customerCity"
+                              #customerCity='ngModel' ngModel
+                              required>
+                                  <option value="india">India</option>
+                                  <option value="japan">Japan</option>
+                                  <option value="russia">Russia</option>
+                                  <option value="america">America</option>
+                                  <option value="aus">Austrailia</option>
+                              </select>
+
+                              <div *ngIf='customerCity.touched && customerCity.invalid'>
+                                <div class="text-danger" *ngIf='customerCity.errors.required'>
+                                    *This field is mandatory
+                                </div>
+                            </div>
+
+
+                          </div>
+                          <div class="form-group">
+                            <label for="customerDOB">Customer Date-of-Birth</label>
+                              <input type="date" class="form-control" placeholder="Enter DOB*" name="customerDOB"
+                              id="customerDOB" #customerDOB='ngModel' ngModel
+                              required
+                              />
+
+                              <div *ngIf='customerDOB.touched && customerDOB.invalid'>
+                                <div class="text-danger" *ngIf='customerDOB.errors.required'>
+                                    *This field is mandatory
+                                </div>
+                            </div>
+                          </div>
+                          <button type="submit" [disabled]='AddCustomerForm.invalid' class="btnRegister"  value="Register">Register </button>
+                      </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
+
+</div>
+</div>
+<div class="footer">
+  <footer> <small>&copy; Copyright {{currentYear}}, Quinnox Airline Corporation</small> </footer> 
+</div>

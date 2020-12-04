@@ -1,0 +1,21 @@
+.background{
+height: 504px;
+}
+.jumbotron{
+ background-image: url('https://wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-39.jpg');
+ background-size: cover;
+ 
+}
+table{
+  background-color: rgba(236, 226, 218, 0.808);
+}
+.footer {
+  position: fixed;
+  padding: 16px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(75, 80, 72);
+  color: white;
+  text-align: center;
+}
